@@ -1,5 +1,6 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
 
 --  Remove highlight on escape in normal mode.
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -7,7 +8,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', '<leader>n', vim.diagnostic.goto_next, { desc = 'Go to [N]ext diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
+vim.keymap.set('n', '<leader>m', vim.diagnostic.open_float, { desc = 'Show diagnostic error [M]essages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
@@ -26,8 +27,12 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set('n', '<C-ö>', '<C-w><C-v>', { desc = 'Split window in two, horoizontally' })
+vim.keymap.set('n', '<C-ö>', '<C-w><C-s>', { desc = 'Split window in two, horizontally' })
 vim.keymap.set('n', '<C-ä>', '<C-w><C-v>', { desc = 'Split window in two, vertically' })
+vim.keymap.set('n', '<C-A-h>', ':vertical resize -5<CR>', { desc = 'Split window in two, vertically' })
+vim.keymap.set('n', '<C-A-l>', ':vertical resize +5<CR>', { desc = 'Split window in two, vertically' })
+vim.keymap.set('n', '<C-A-j>', ':horizontal resize +5<CR>', { desc = 'Split window in two, vertically' })
+vim.keymap.set('n', '<C-A-k>', ':horizontal resize -5<CR>', { desc = 'Split window in two, vertically' })
 
 -- Repeat last command
 vim.keymap.set('n', '<C-.>', '@:', { desc = 'Repeat last command' })

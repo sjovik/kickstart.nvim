@@ -29,14 +29,16 @@ return {
 
         local current_mark = get_current_mark()
 
-        return string.format('󱡅 %s/%d', current_mark, total_marks)
+        -- return string.format('%s/%d', current_mark, total_marks)
+        return string.format('󰛢 %s/%d', current_mark, total_marks)
       end
 
+      ---@diagnostic disable: undefined-field
       require('lualine').setup {
         options = {
           theme = 'catppuccin',
           globalstatus = true,
-          component_separators = { left = '▕', right = '▕' },
+          component_separators = { left = '▕ ', right = '▕ ' },
           section_separators = { left = '█', right = '█' },
         },
         sections = {

@@ -60,8 +60,15 @@ return { -- Fuzzy Finder (files, lsp, etc)
       --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
       --   },
       -- },
+      -- Fungerar inte än?
+      -- defaults = {
+      --   path_display = {
+      --     filename_first = {
+      --       reverse_directories = false,
+      --     },
+      --   },
+      -- },
       pickers = {
-
         find_files = {
           hidden = true,
         },
@@ -92,7 +99,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
-      -- You can pass additional configuration to telescope to change theme, layout, etc.
+      -- You can pass additional configuration to telescope to change theme, tlayout, etc.
       builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
         previewer = false,

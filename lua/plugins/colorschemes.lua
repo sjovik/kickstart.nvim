@@ -1,9 +1,7 @@
 return {
   'catppuccin/nvim',
-  lazy = false,
   name = 'catppuccin',
-  priority = 1000,
-  config = function()
+  init = function()
     require('catppuccin').setup {
       integrations = {
         cmp = true,

@@ -1,5 +1,16 @@
 return { -- Autoformat
   'stevearc/conform.nvim',
+  lazy = false,
+  keys = {
+    {
+      '<leader>f',
+      function()
+        require('conform').format { async = true, lsp_fallback = true }
+      end,
+      mode = '',
+      desc = '[F]ormat buffer',
+    },
+  },
   opts = {
     -- log_level = vim.log.levels.DEBUG,
     notify_on_error = true,
@@ -8,7 +19,7 @@ return { -- Autoformat
       lsp_fallback = true,
     },
     formatters_by_ft = {
-      lua = { 'stylua'  },
+      lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

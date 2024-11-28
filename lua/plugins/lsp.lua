@@ -23,7 +23,7 @@ return { -- LSP Configuration & Plugins
     -- and language tooling communicate in a standardized fashion.
     --
     -- In general, you have a "server" which is some tool built to understand a particular
-    -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc). These Language Servers
+    -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc). These Language Server.
     -- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
     -- processes that communicate with some "client" - in this case, Neovim!
     --
@@ -154,7 +154,7 @@ return { -- LSP Configuration & Plugins
 
       lua_ls = {
         -- cmd = {...},
-        -- filetypes { ...},
+        -- filetypes = { ...},
         -- capabilities = {},
         settings = {
           Lua = {

@@ -28,8 +28,18 @@ return { -- Adds git related signs to the gutter, as well as utilities for manag
       },
     }
 
+    local gitsigns = require 'gitsigns'
+
     vim.keymap.set('n', '<leader>gg', ':Gitsigns<CR>', { desc = '[G]itline [G]it commands' })
-    vim.keymap.set('n', '<leader>gb', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle [G]it [B]lame line' })
-    vim.keymap.set('n', '<leader>gh', ':Gitsigns preview_hunk<CR>', { desc = 'Toggle [G]it [H]unks' })
+    vim.keymap.set('n', '<leader>gb', gitsigns.toggle_current_line_blame, { desc = 'Toggle [G]it [B]lame line' })
+    vim.keymap.set('n', '<leader>gh', gitsigns.preview_hunk, { desc = 'Toggle [G]it [H]unks' })
+    vim.keymap.set('n', '<leader>gn', function()
+      gitsigns.nav_hunk 'next'
+    end, { desc = 'Jump to [G]it [N]ext hunk' })
+    vim.keymap.set('n', '<leader>gp', function()
+      gitsigns.nav_hunk 'prev'
+    end, { desc = 'Jump to [G]it [P]rev hunk' })
+    vim.keymap.set('n', '<leader>gs', gitsigns.stage_hunk, { desc = '[G]it [s]tage Hunk' })
+    vim.keymap.set('n', '<leader>gS', gitsigns.stage_buffer, { desc = '[G]it [S]tage Buffer' })
   end,
 }

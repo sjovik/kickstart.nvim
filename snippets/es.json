@@ -1,0 +1,60 @@
+{
+  "console.log": {
+    "prefix": "conl",
+    "body": ["console.log({$1});", "$2"],
+    "description": "log object"
+  },
+  "console.log.string": {
+    "prefix": "cons",
+    "body": ["console.log('$1',$2);"],
+    "description": "console log string"
+  },
+  "console.log.mark": {
+    "prefix": "conk",
+    "body": ["console.log('1$1', $2);"],
+    "description": "console log mark"
+  },
+  "console.log.json": {
+    "prefix": "conj",
+    "body": ["console.log(JSON.parse(JSON.stringify($1)));"],
+    "description": "console log json"
+  },
+  "styled.fn.theme": {
+    "prefix": "th",
+    "body": ["${({theme}) => theme.c$1}"],
+    "description": "styled component theme fn"
+  },
+  "styled.fn": {
+    "prefix": "st",
+    "body": ["${({$1}) => $2}"],
+    "description": "styled component fn"
+  },
+  "react.fc": {
+    "prefix": "rfc",
+    "body": [
+      "import styled from 'styled-components';",
+      "",
+      "type $1Props = {$2};",
+      "",
+      "const $1 = ({$2}: $1Props) => {",
+      "  $3",
+      "  return (",
+      "    $4",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "react fc with st"
+  },
+  "performance.now": {
+    "prefix": "perf",
+    "body": [
+      "$3const startTime = performance.now();",
+      "$1",
+      "$2const endTime = performance.now();",
+      "console.log(`Execution took ${endTime - startTime} milliseconds`)"
+    ],
+    "description": "measure execution time"
+  }
+}

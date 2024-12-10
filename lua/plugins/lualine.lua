@@ -11,7 +11,7 @@ return {
         local current_file_path = vim.api.nvim_buf_get_name(0)
         for i = 1, list:length() do
           local list_item_path = list:get(i).value
-          local full_path = root_dir .. '/' .. list_item_path
+          local full_path = root_dir .. '\\' .. list_item_path
 
           if full_path == current_file_path then
             return tostring(i)
@@ -29,7 +29,6 @@ return {
 
         local current_mark = get_current_mark()
 
-        -- return string.format('%s/%d', current_mark, total_marks)
         return string.format('󰛢 %s/%d', current_mark, total_marks)
       end
 

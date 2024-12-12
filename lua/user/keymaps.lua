@@ -29,10 +29,10 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-l>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<C-m>', '<C-w><C-s>', { desc = 'Split window in two, horizontally' })
 vim.keymap.set('n', '<C-n>', '<C-w><C-v>', { desc = 'Split window in two, vertically' })
-vim.keymap.set('n', '<C-A-h>', ':vertical resize -5<CR>', { desc = 'Split window in two, vertically' })
-vim.keymap.set('n', '<C-A-l>', ':vertical resize +5<CR>', { desc = 'Split window in two, vertically' })
-vim.keymap.set('n', '<C-A-j>', ':horizontal resize +5<CR>', { desc = 'Split window in two, vertically' })
-vim.keymap.set('n', '<C-A-k>', ':horizontal resize -5<CR>', { desc = 'Split window in two, vertically' })
+vim.keymap.set('n', '<C-A-h>', ':vertical resize -5<CR>', { desc = 'Resize vertically, -5' })
+vim.keymap.set('n', '<C-A-l>', ':vertical resize +5<CR>', { desc = 'Resize vertically, +5' })
+vim.keymap.set('n', '<C-A-j>', ':horizontal resize +5<CR>', { desc = 'Resize horizontally, +5' })
+vim.keymap.set('n', '<C-A-k>', ':horizontal resize -5<CR>', { desc = 'Rezize horizontally -5' })
 
 -- Repeat last command
 vim.keymap.set('n', '<C-.>', '@:', { desc = 'Repeat last command' })

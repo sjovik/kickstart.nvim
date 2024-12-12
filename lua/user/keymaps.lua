@@ -23,12 +23,12 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set('n', '<C-ö>', '<C-w><C-s>', { desc = 'Split window in two, horizontally' })
-vim.keymap.set('n', '<C-ä>', '<C-w><C-v>', { desc = 'Split window in two, vertically' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-h>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<C-m>', '<C-w><C-s>', { desc = 'Split window in two, horizontally' })
+vim.keymap.set('n', '<C-n>', '<C-w><C-v>', { desc = 'Split window in two, vertically' })
 vim.keymap.set('n', '<C-A-h>', ':vertical resize -5<CR>', { desc = 'Split window in two, vertically' })
 vim.keymap.set('n', '<C-A-l>', ':vertical resize +5<CR>', { desc = 'Split window in two, vertically' })
 vim.keymap.set('n', '<C-A-j>', ':horizontal resize +5<CR>', { desc = 'Split window in two, vertically' })
